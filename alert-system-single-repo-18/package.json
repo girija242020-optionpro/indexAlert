@@ -1,0 +1,21 @@
+{
+  "name": "dhan-alert-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Data provider + Web Push bridge for the NIFTY/SENSEX alert PWA (Dhan API v2). No strategy logic lives here.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/core.test.js test-pwa/engine.test.js test-pwa/ui-smoke.mjs",
+    "gen-vapid": "node scripts/gen-vapid.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "web-push": "^3.6.7",
+    "ws": "^8.18.0"
+  }
+}
